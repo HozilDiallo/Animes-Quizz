@@ -321,4 +321,4 @@ col1, col2 = st.columns(2)
 with col1:
     st.link_button("👍 Chaine Whatshapp", url="https://chat.whatsapp.com/Dk6RaJw6PsOEyJnIxCIrs8")
 with col2:
-    st.text("👍 Made by Hozil)
+    st.text("👍 Made by Hozil")
