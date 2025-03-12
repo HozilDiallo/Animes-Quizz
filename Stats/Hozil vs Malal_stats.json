@@ -1,0 +1,74 @@
+{
+    "attempts": [
+        {
+            "timestamp": "2025-03-12T20:18:46.148729",
+            "question": "Dans quel animé le protagoniste possède-t-il un cahier qui tue les personnes dont les noms y sont inscrits ?",
+            "user_answer": "Death note",
+            "correct_answer": "Death Note",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:47.764043",
+            "question": "Quel est le nom du village caché où vit Naruto Uzumaki ?",
+            "user_answer": "Konoha",
+            "correct_answer": "Konoha",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:49.587221",
+            "question": "Dans 'L'Attaque des Titans', quel est le nom de la ville principale où se déroule une grande partie de l'histoire ?",
+            "user_answer": "village",
+            "correct_answer": "Shiganshina",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-12T20:18:50.493050",
+            "question": "Quel animé suit les aventures d'un jeune alchimiste cherchant la pierre philosophale ?",
+            "user_answer": "Fulmetal alchemist",
+            "correct_answer": "Fullmetal Alchemist",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:51.972137",
+            "question": "Quel est le nom du monde virtuel dans 'Sword Art Online' où les joueurs sont piégés ?",
+            "user_answer": "sword",
+            "correct_answer": "Aincrad",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-12T20:18:53.488512",
+            "question": "Dans 'One Piece', quel est le nom du pirate qui a laissé le trésor légendaire connu sous le nom de 'One Piece' ?",
+            "user_answer": "Gold Roger",
+            "correct_answer": "Gol D. Roger",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:54.616064",
+            "question": "Quel animé met en scène un groupe de chasseurs qui passent un examen pour obtenir une licence de chasseur ?",
+            "user_answer": "Hunter x Hunter",
+            "correct_answer": "Hunter x Hunter",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:55.458803",
+            "question": "Dans 'My Hero Academia', quel est le nom de l'école où les élèves apprennent à devenir des héros ?",
+            "user_answer": "lycee UA",
+            "correct_answer": "U.A. High School",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:56.974703",
+            "question": "Quel est le nom du démon renard scellé dans Naruto Uzumaki ?",
+            "user_answer": "Kurama",
+            "correct_answer": "Kurama",
+            "score": 2
+        },
+        {
+            "timestamp": "2025-03-12T20:18:58.510726",
+            "question": "Dans 'Dragon Ball Z', quel est le nom de la planète d'origine de Goku ?",
+            "user_answer": "Zelda",
+            "correct_answer": "Végéta",
+            "score": 0
+        }
+    ]
+}
