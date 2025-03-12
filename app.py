@@ -19,7 +19,7 @@ st.sidebar.title("📝 **AnimesGeek**")
 st.sidebar.markdown("<h3>Menu</h3>", unsafe_allow_html=True)
 menu = st.sidebar.radio(
     "📂 <span style='color: #0066CC;'>Choisissez une option :</span>",
-    ["Dashboard","Configuration", "Mode Quiz", "Performances"],
+    ["Dashboard","Prise de Outils", "Mode Quiz", "Performances"],
     format_func=lambda x: f"🔹 {x}",
     index=0,
     label_visibility="hidden",
