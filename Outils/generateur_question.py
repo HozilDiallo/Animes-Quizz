@@ -16,7 +16,7 @@ load_dotenv()
 api_key = os.getenv("DEEPSEEK_KEY")
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=api_key,
+    api_key="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",
 )
 
 
