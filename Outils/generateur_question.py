@@ -29,11 +29,11 @@ def timer(seconds):
 timer(10)  # Minuteur de 10 secondes
 
 
-def generate_questions(note_title, note_content):
+def generate_questions(partie_title, partie_content):
     """
     Génère des questions à partir du contenu des notes en utilisant l'API DeepSeek.
-    :param note_title: Titre de la note
-    :param note_content: Contenu de la note
+    :param partie_title: Titre de la note
+    :param partie_content: Contenu de la partie
     :return: Une liste de questions générées
     """
     try:
@@ -43,7 +43,7 @@ def generate_questions(note_title, note_content):
             f"Les questions que tu choisiras doivent etre des QCM (Question à Choix Multiples).\n"
             f"Pour chaque question, retourne un JSON avec deux clés : "
             f"'text' pour la question et 'reponse' pour la réponse correcte.\n"
-            f"Texte : {note_content}\n"
+            f"Texte : {partie_content}\n"
             f"Retourne uniquement du JSON, rien d'autre."
         )
 
@@ -72,7 +72,7 @@ def generate_questions(note_title, note_content):
             raise ValueError("La réponse de l'API n'est pas un JSON valide.")
 
         # Sauvegarder les questions dans un fichier JSON
-        json_file_path = os.path.join(QUESTIONS_DIR, f"{note_title}.json")
+        json_file_path = os.path.join(QUESTIONS_DIR, f"{partie_title}.json")
         with open(json_file_path, "w") as file:
             json.dump(questions, file, indent=4, ensure_ascii=False)
         logging.info("Questions sauvegardées dans : %s", json_file_path)
