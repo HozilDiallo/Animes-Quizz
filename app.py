@@ -10,7 +10,7 @@ import os, json
 from Outils.partie_num import load_parties, save_partie, delete_partie, update_partie
 from Outils.generateur_question import generate_questions, evaluate_answer
 from config import QUESTIONS_DIR
-from Outils.manager_stats import get_all_stats, save_quiz_result, delete_note_stats, delete_all_stats
+from Outils.manager_stats import get_all_stats, save_quiz_result, delete_partie_stats, delete_all_stats
 
 # Application principale
 

@@ -62,7 +62,7 @@ def get_all_stats():
     return all_stats
 
 
-def delete_note_stats(note_title):
+def delete_partie_stats(note_title):
     """
     Supprime l'historique des stats pour une note donnée
     """

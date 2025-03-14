@@ -2,7 +2,6 @@ import os
 import re
 import json
 import logging
-import threading
 from openai import OpenAI
 from dotenv import load_dotenv
 from sympy.physics.units import seconds
@@ -21,13 +20,6 @@ client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key="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",
 )
-
-def timer(seconds):
-    print(f"Minuteur lancé pour {seconds} secondes...")
-    threading.Timer(seconds, lambda: print("Le minuteur est terminé !")).start()
-
-timer(10)  # Minuteur de 10 secondes
-
 
 def generate_questions(note_title, note_content):
     """
@@ -165,10 +157,6 @@ def evaluate_answer(question, user_answer, correct_answer):
             raise ValueError("Le JSON retourné ne contient pas la clé 'score'")
 
         return {"score": evaluation["score"]}
-
-        if "minuteur" not in seconds:
-            raise ValueError("Le JSON retourné ne contient pas la clé 'score'")
-        return {"minuteur": seconds["minuteur"]}
 
     except Exception as e:
         logging.exception("Erreur lors de l'évaluation de la réponse")
