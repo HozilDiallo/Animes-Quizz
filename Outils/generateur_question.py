@@ -4,7 +4,7 @@ import json
 import logging
 from openai import OpenAI
 from dotenv import load_dotenv
-from sympy.physics.units import seconds
+
 
 from config import QUESTIONS_DIR, QUESTIONS_FILE
 
@@ -112,7 +112,6 @@ def evaluate_answer(question, user_answer, correct_answer):
         prompt = (
             f"Tu es un bot qui évalue une réponse d'un joueur de manière bienveillante.\n"
             f"Question: {question}\n"
-            f"Minuteur: {seconds}\n"
             f"Réponse correcte: {correct_answer}\n"
             f"Réponse du joueur: {user_answer}\n\n"
             f"Règles d'évaluation:\n"
