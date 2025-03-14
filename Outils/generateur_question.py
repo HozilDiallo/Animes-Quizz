@@ -2,8 +2,11 @@ import os
 import re
 import json
 import logging
+import threading
 from openai import OpenAI
 from dotenv import load_dotenv
+from sympy.physics.units import seconds
+
 from config import QUESTIONS_DIR, QUESTIONS_FILE
 
 # Configure logging
@@ -16,8 +19,14 @@ load_dotenv()
 api_key = os.getenv("DEEPSEEK_KEY")
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=api_key,
+    api_key="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",
 )
+
+def timer(seconds):
+    print(f"Minuteur lancé pour {seconds} secondes...")
+    threading.Timer(seconds, lambda: print("Le minuteur est terminé !")).start()
+
+timer(10)  # Minuteur de 10 secondes
 
 
 def generate_questions(note_title, note_content):
@@ -31,7 +40,7 @@ def generate_questions(note_title, note_content):
         prompt = (
             f"À partir de cette question, crée une séries de questions relativement ouvertes qui permettent de savoir si un joueur connait les animés. "
             f"Tu choisiras 10 questions en fonction de l'information donnée.\n"
-            f"Les questions que tu choisiras doivent etre des QCM (Question à Choix Multiples.\n"
+            f"Les questions que tu choisiras doivent etre des QCM (Question à Choix Multiples).\n"
             f"Pour chaque question, retourne un JSON avec deux clés : "
             f"'text' pour la question et 'reponse' pour la réponse correcte.\n"
             f"Texte : {note_content}\n"
@@ -111,12 +120,15 @@ def evaluate_answer(question, user_answer, correct_answer):
         prompt = (
             f"Tu es un bot qui évalue une réponse d'un joueur de manière bienveillante.\n"
             f"Question: {question}\n"
+            f"Minuteur: {seconds}\n"
             f"Réponse correcte: {correct_answer}\n"
             f"Réponse du joueur: {user_answer}\n\n"
             f"Règles d'évaluation:\n"
+            f"- Apres la generation des questions un minuteur est lancé.\n"
             f"- Une seule réponse est possible pour chaque question.\n"
             f"- Chaque réponse est noté score de 2 points.\n"
             f"- Chaque réponse juste, mérite 2 points sinon il ne mérite 0 points.\n"
+            f"- A la fin tu calcule le temps .\n"
             f"Retourne UNIQUEMENT un JSON valide avec ce format exact: {{\"score\": X}} où X est la somme des point. pour chaque questions juste.\n"
             f"Utilise les guillemets doubles pour la clé \"score\"."
         )
@@ -154,6 +166,11 @@ def evaluate_answer(question, user_answer, correct_answer):
 
         return {"score": evaluation["score"]}
 
+        if "minuteur" not in seconds:
+            raise ValueError("Le JSON retourné ne contient pas la clé 'score'")
+        return {"minuteur": seconds["minuteur"]}
+
     except Exception as e:
         logging.exception("Erreur lors de l'évaluation de la réponse")
         return {"score": 0}
+

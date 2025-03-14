@@ -69,6 +69,76 @@
             "user_answer": "Zelda",
             "correct_answer": "Végéta",
             "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:35.191517",
+            "question": "Quel est le premier anime jamais créé ?",
+            "user_answer": "",
+            "correct_answer": "Astro Boy",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:37.638006",
+            "question": "Qui est le réalisateur de 'Neon Genesis Evangelion' ?",
+            "user_answer": "",
+            "correct_answer": "Hideaki Anno",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:39.127270",
+            "question": "Dans 'Death Note', quel est le nom du dieu de la mort qui donne le carnet à Light Yagami ?",
+            "user_answer": "",
+            "correct_answer": "Ryuk",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:40.964328",
+            "question": "Quel est le nom du protagoniste principal dans 'Cowboy Bebop' ?",
+            "user_answer": "",
+            "correct_answer": "Spike Spiegel",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:42.853488",
+            "question": "Dans 'Fullmetal Alchemist', quel est le nom du frère d'Edward Elric ?",
+            "user_answer": "",
+            "correct_answer": "Alphonse Elric",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:44.251231",
+            "question": "Quel est le nom du village caché où vit Naruto au début de la série ?",
+            "user_answer": "",
+            "correct_answer": "Konoha",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:45.964306",
+            "question": "Dans 'Attack on Titan', quel est le nom du premier Titan que Eren Jaeger affronte ?",
+            "user_answer": "",
+            "correct_answer": "Titan Colossal",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:47.816750",
+            "question": "Quel est le nom de l'organisation de pirates dans 'One Piece' ?",
+            "user_answer": "",
+            "correct_answer": "Les Chapeaux de Paille",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:48.983284",
+            "question": "Dans 'My Hero Academia', quel est le nom du héros professionnel surnommé 'All Might' ?",
+            "user_answer": "",
+            "correct_answer": "Toshinori Yagi",
+            "score": 0
+        },
+        {
+            "timestamp": "2025-03-14T16:02:50.217272",
+            "question": "Quel est le nom de l'épée dans 'Bleach' que Ichigo Kurosaki utilise pour combattre ?",
+            "user_answer": "",
+            "correct_answer": "Zangetsu",
+            "score": 0
         }
     ]
 }
